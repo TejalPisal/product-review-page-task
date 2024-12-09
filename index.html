@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Product Overview Section -->
+        <section class="product-overview">
+            <img id="product-image" src="" alt="Product Image">
+            <div>
+                <h1 id="product-name"></h1>
+                <p id="product-price"></p>
+                <p id="product-description"></p>
+            </div>
+        </section>
+
+        <!-- Review Summary Section -->
+        <section class="review-summary">
+            <h2>Review Summary</h2>
+            <div id="rating-summary"></div>
+            <div id="star-rating-breakdown"></div>
+            <!-- Filter Reviews -->
+            <label for="review-filter">Filter Reviews by Rating:</label>
+            <select id="review-filter">
+                <option value="all">All</option>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="2">2 Stars</option>
+                <option value="1">1 Star</option>
+            </select>
+        </section>
+
+        <!-- Review List Section -->
+        <section class="review-list">
+            <h2>User Reviews</h2>
+            <div id="reviews"></div>
+        </section>
+
+        <!-- Add Review Form Section -->
+        <section class="add-review">
+            <h2>Submit a Review</h2>
+
+            <!-- Form for submitting a new review -->
+            <form id="review-form">
+                <label for="user-name">Your Name</label>
+                <input type="text" id="user-name" required placeholder="Enter your name">
+
+                <label for="star-rating">Star Rating</label>
+                <select id="star-rating" required>
+                    <option value="">Select a rating</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+
+                <label for="review-text">Review</label>
+                <textarea id="review-text" required placeholder="Write your review here"></textarea>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
