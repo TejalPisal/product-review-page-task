@@ -7,68 +7,88 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <!-- Main container to hold the entire content -->
     <div class="container">
+        
         <!-- Product Overview Section -->
-        <section class="product-overview">
+        <section id="product-overview">
+            <!-- Heading for product list -->
+            <h1>Products</h1>
+            <!-- Div to dynamically populate product list -->
+            <div id="product-list" class="product-list"></div>
+        </section>
+
+        <!-- Check Review Details Section -->
+        <section id="review-details" class="review-details">
+            <!-- Button to navigate back to the product list -->
+            <button id="back-button">Back to Products</button>
+            <!-- Heading for product details and reviews -->
+            <h2>Product Details & Reviews</h2>
+
+            <!-- Product image -->
             <img id="product-image" src="" alt="Product Image">
+            
+            <!-- Product name, price, and description -->
             <div>
-                <h1 id="product-name"></h1>
+                <h3 id="product-name"></h3>
                 <p id="product-price"></p>
                 <p id="product-description"></p>
             </div>
-        </section>
 
-        <!-- Review Summary Section -->
-        <section class="review-summary">
-            <h2>Review Summary</h2>
-            <div id="rating-summary"></div>
-            <div id="star-rating-breakdown"></div>
-            <!-- Filter Reviews -->
-            <label for="review-filter">Filter Reviews by Rating:</label>
-            <select id="review-filter">
-                <option value="all">All</option>
-                <option value="5">5 Stars</option>
-                <option value="4">4 Stars</option>
-                <option value="3">3 Stars</option>
-                <option value="2">2 Stars</option>
-                <option value="1">1 Star</option>
-            </select>
-        </section>
+            <!-- Review Summary Section -->
+            <section class="review-summary">
+                <!-- Heading for review summary -->
+                <h2>Review Summary</h2>
+                <!-- Div to display overall rating summary -->
+                <div id="rating-summary"></div>
+                <!-- Div to display star rating breakdown from number of star 5 to star 1 -->
+                <div id="star-rating-breakdown"></div>
 
-        <!-- Review List Section -->
-        <section class="review-list">
-            <h2>User Reviews</h2>
-            <div id="reviews"></div>
-        </section>
-
-        <!-- Add Review Form Section -->
-        <section class="add-review">
-            <h2>Submit a Review</h2>
-
-            <!-- Form for submitting a new review -->
-            <form id="review-form">
-                <label for="user-name">Your Name</label>
-                <input type="text" id="user-name" required placeholder="Enter your name">
-
-                <label for="star-rating">Star Rating</label>
-                <select id="star-rating" required>
-                    <option value="">Select a rating</option>
-                    <option value="1">1 Star</option>
-                    <option value="2">2 Stars</option>
-                    <option value="3">3 Stars</option>
-                    <option value="4">4 Stars</option>
+                <!-- Filter to display reviews by rating -->
+                <label for="review-filter">Filter Reviews by Rating:</label>
+                <select id="review-filter">
+                    <option value="all">All</option>
                     <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
                 </select>
+            </section>
 
-                <label for="review-text">Review</label>
-                <textarea id="review-text" required placeholder="Write your review here"></textarea>
+            <!-- Section to display customer reviews -->
+            <div id="reviews"></div>
 
-                <button type="submit">Submit Review</button>
-            </form>
+            <!-- Submit Review Form Section -->
+            <section id="submit-review">
+                <h2>Submit Your Review</h2>
+                <!-- Form to submit a new review -->
+                <form id="review-form">
+                    <!-- Input for the user's name -->
+                    <label for="user-name">Your Name</label>
+                    <input type="text" id="user-name" required placeholder="Enter your name">
+                    
+                    <!-- Dropdown for selecting star rating -->
+                    <label for="star-rating">Star Rating</label>
+                    <select id="star-rating" aria-label="Star Rating" required>
+                        <option value="">Select a rating</option>
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="5">5 Stars</option>
+                    </select>
+
+                    <!-- Textarea for writing a review -->
+                    <label for="review-text">Review</label>
+                    <textarea id="review-text" required placeholder="Write your review here"></textarea>
+                    <!-- Submit button for submitting the review -->
+                    <button type="submit">Submit Review</button>
+                </form>
+            </section>
         </section>
     </div>
-
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>

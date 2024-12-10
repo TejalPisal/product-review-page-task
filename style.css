@@ -5,64 +5,122 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;  
+    background-color: #f4f4f9;      
     display: flex;
-    justify-content: center;
-    padding: 20px;
+    justify-content: center;     
+    padding: 20px;          
 }
 
 /* Main container styling */
 .container {
     width: 100%;
-    max-width: 1200px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    max-width: 1200px;  
+    background-color: white;   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px;             
 }
 
-/* Product Overview Section */
-.product-overview {
+/* Headings styling */
+h2 {
+    color: #333;             
+    margin-bottom: 10px;            
+    font-size: 1.5em;              
+    text-align: center;            
+}
+
+/* Product List Section */
+.product-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;                
+    gap: 20px;                       
+    justify-content: center;         
+}
+
+/* Product item styling */
+.product-item {
+    border: 1px solid #ddd;         
+    border-radius: 8px;             
+    width: 250px;                   
+    background-color: #fff;       
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 10px;           
+    text-align: center;            
+    cursor: pointer;             
+}
+
+/* Product image styling */
+.product-item img {
+    width: 100%;                  
+    height: 200px;                  
+    object-fit: cover;            
+    border-radius: 8px;          
+}
+
+/* Product name and description styling */
+.product-item h3 {
+    font-size: 1.1em;
+    margin: 10px 0;             
+}
+
+.product-item p {
+    color: #333;                   
+    font-size: 1em;
+}
+
+/* Check Review button styling */
+.product-item button {
+    margin-top: 10px;
+    background-color: #4CAF50;      
+    color: white;                  
+    border: none;                   
+    padding: 8px;                    
+    cursor: pointer;                 
+    border-radius: 4px;             
+}
+
+/* Button hover effect */
+.product-item button:hover {
+    background-color: #45a049;      
+}
+
+/* Check Review Details Section */
+.review-details {
+    display: none;                  
+    padding-top: 20px;               
+}
+
+/* Product image in the check review section */
+#product-image {
+    width: 100%;                     
+    max-width: 300px;                
+    height: auto;                    
+    object-fit: cover;              
     margin-bottom: 20px;
 }
 
-.product-overview img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    margin-right: 20px;
-}
-
-.product-overview h1 {
-    font-size: 2rem;
-    color: #333;
-}
-
-#product-price{
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-#product-description {
-    color: #777;
-}
-
-/* Review Summary Section */
-.review-summary {
+/* Styling for back button */
+#back-button {
     margin-bottom: 20px;
+    background-color: #f44336;      
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-#rating-summary {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+/* Back button hover effect */
+#back-button:hover {
+    background-color: #e53935;
 }
 
+/* Review summary and star rating breakdown */
 #star-rating-breakdown {
     display: flex;
     justify-content: space-around;
     margin-bottom: 4%;
+    flex-wrap: wrap;                
 }
 
 #star-rating-breakdown div {
@@ -71,199 +129,134 @@ body {
     align-items: center;
 }
 
-/* Styling for Filter Reviews by Rating*/
+/* Filter reviews by rating label */
 label[for="review-filter"] {
-    font-weight: bold;
+    font-weight: bold;               
 }
 
-
-/* Review List Section */
-.review-list {
-    margin-bottom: 20px;
+/* Review section margin */
+#reviews {
+    margin-top: 3%;
 }
 
-.review-list h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+/* Form styling for submitting reviews */
+form {
+    margin-top: 20px;                
 }
 
-/* Add Review Section */
-.add-review {
-    background-color: #e9f5ff;
-    padding: 15px;
-    border-radius: 5px;
+/* Inputs, selects, and textarea in form */
+form input, form select, form textarea {
+    width: 100%;                    
+    padding: 8px;
+    margin: 5px 0;
 }
 
-.add-review form {
-    display: flex;
-    flex-direction: column;
-}
-
-.add-review label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.add-review input,
-.add-review select,
-.add-review textarea {
-    margin-bottom: 15px;
+/* Form button styling */
+form button {
+    background-color: #2196F3;      
+    color: white;                    
+    border: none;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.add-review button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
     cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Form button hover effect */
+form button:hover {
+    background-color: #1976D2;
+}
+
+/* Review item fade-in animation */
+.review-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
 }
 
-/* Button hover effect */
-.add-review button:hover {
-    background-color: #45a049;
-}
-
-/* Responsive Styles */
-/* Media query for screens smaller than 768px */
-@media (max-width: 768px) {
-    .product-overview {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .product-overview img {
-        margin-bottom: 15px;
-    }
-
-    #star-rating-breakdown {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .review-list, .review-summary {
-        text-align: center;
-    }
-
-    .add-review form {
-        width: 100%;
-    }
-
-    .add-review input,
-    .add-review select,
-    .add-review textarea {
-        width: 100%;
-    }
-
-    .add-review button {
-        width: 100%;
-    }
-}
-
-/* Media query for screens smaller than 480px */
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .product-overview h1 {
-        font-size: 1.5rem;
-    }
-
-    .product-overview p {
-        font-size: 0.9rem;
-    }
-
-    #rating-summary {
-        font-size: 1.2rem;
-    }
-
-    .review-list h2,
-    .review-summary h2 {
-        font-size: 1.5rem;
-    }
-
-    .add-review label {
-        font-size: 0.9rem;
-    }
-
-    .add-review input,
-    .add-review select,
-    .add-review textarea {
-        font-size: 0.9rem;
-    }
-
-    .add-review button {
-        font-size: 1rem;
-    }
-}
-
-/* Animation to review submission */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.review {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Styling for Like Button */
+/* Like button for reviews */
 .like-button {
-    background-color: #ff5722;
-    color: white;
-    padding: 5px 10px;
+    background-color: #f0f0f0;
     border: none;
+    color: #007bff;
     cursor: pointer;
+    padding: 5px 10px;
     border-radius: 5px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
 }
 
 /* Like button hover effect */
 .like-button:hover {
-    background-color: #ff3d00;
+    background-color: #e0e0e0;
 }
 
-/* Animation for when reviews load */
-.review {
-    opacity: 0;
-    transform: translateY(20px); /* Slightly moves the review from below */
-    animation: fadeInUp 0.5s forwards; /* Fade in animation */
-}
-
-/* Animation for review submission */
-.new-review {
-    animation: bounceIn 0.6s ease-out;/* Bounce effect when a new review is submitted */
-}
-
-/* Keyframes for fade-in-up animation */
-@keyframes fadeInUp {
+/* Animation for fading in reviews */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Keyframes for bouncing new review submission */
+/* Bounce animation for submit button */
 @keyframes bounceIn {
     0% {
-        transform: scale(0);
+        transform: scale(0.95);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
     100% {
         transform: scale(1);
+    }
+}
+
+/* Submit review form section styling */
+#submit-review {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    form input, form select, form textarea {
+        font-size: 1rem;
+    }
+
+    #submit-review {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #review-details, #submit-review {
+        padding: 10px;
+    }
+
+    form input, form select, form textarea {
+        font-size: 0.9rem;
+    }
+
+    form button {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.3em;
     }
 }
