@@ -36,12 +36,14 @@ The Product Review Page designed to allow users to interact with product details
   New reviews are dynamically added to the review list when submitted by users.
 
 - **Validation on Form Submission**  
-  The form checks for required fields. If the form is incomplete, error messages guide the user to fill out the required fields.
+  The form checks for required fields. 
+
+- **Like Button**
+  Users can like reviews, and a counter will display how many people found the review useful.
 
 - **Responsive Design**  
   - The page layout adapts to different screen sizes using CSS, ensuring the page is mobile-friendly and looks good on all devices (desktop, tablet, mobile).
-  - **Animations** for actions like submitting reviews or loading content.
-  - **Like/Helpful Button**: Optionally, users can mark reviews as helpful or like them, and a counter will display how many people found the review useful.
+  - **Animations** for actions like submitting reviews.
 
 - **Accessibility**  
   The project uses semantic HTML and ARIA attributes to make sure the page is accessible to screen readers and users with disabilities.
