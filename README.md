@@ -52,7 +52,7 @@ The Product Review Page designed to allow users to interact with product details
 - **HTML**: Used for the page structure.
 - **CSS**: For styling the page and for responsiveness.
 - **JavaScript**: To handle dynamic behaviors like adding new reviews and filtering reviews.
-- **External API** for user data: [https://mocki.io/v1/0d96b1ad-1c02-423d-bad8-fdde2f837719](https://mocki.io/v1/0d96b1ad-1c02-423d-bad8-fdde2f837719)
+- **External API** for user data: [https://mocki.io/v1/34cb0402-0510-4978-b601-d2921936a99e](https://mocki.io/v1/34cb0402-0510-4978-b601-d2921936a99e)
 
 
 ## Setup Instructions
